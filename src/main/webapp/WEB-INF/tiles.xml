@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+<tiles-definitions>  
+    <!-- Base Define -->
+   
+    
+    
+    <definition name="base.definition" 
+        template="/WEB-INF/pages/layouts/layout.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/pages/head.jsp" />  
+        <put-attribute name="head" value="/WEB-INF/pages/header.jsp"></put-attribute>
+        <put-attribute name="menu" value="/WEB-INF/pages/navbar.jsp" />  
+        <put-attribute name="body" value="" />  
+    </definition>  
+ 
+    <!-- Home Page -->
+    <definition name="home" extends="base.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/pages/home.jsp" />  
+    </definition>  
+       
+    <!-- ContactUs Page -->
+    <definition name="users" extends="base.definition">  
+        <put-attribute name="title" value="Users" />  
+        <put-attribute name="body" value="/WEB-INF/pages/client/manage/user/users.jsp" />  
+    </definition>  
+    
+    <definition name="orgdefinition" extends="base.definition">  
+        <put-attribute name="title" value="Company Details" />  
+        <put-attribute name="body" value="/WEB-INF/pages/organization/orgdefinition.jsp" />  
+    </definition>  
+    
+    <definition name="currency" extends="base.definition">  
+        <put-attribute name="title" value="Currency Definition" />  
+        <put-attribute name="body" value="/WEB-INF/pages/setups/currencies.jsp" />  
+    </definition>
+
+      <definition name="paymodesList" extends="base.definition">  
+        <put-attribute name="title" value="Payment Modes List" />  
+        <put-attribute name="body" value="/WEB-INF/pages/setups/paymentmodes.jsp" />  
+    </definition>
+    
+   
+    
+    <definition name="countries" extends="base.definition">  
+        <put-attribute name="title" value="Countries/Counties/Towns Definition" />  
+        <put-attribute name="body" value="/WEB-INF/pages/setups/countries.jsp" />  
+    </definition> 
+    
+     <definition name="orgSetupScreen" extends="base.definition">  
+        <put-attribute name="title" value="Company Set Up" />  
+        <put-attribute name="body" value="/WEB-INF/pages/submenus/orgSetupScreen.jsp" />  
+    </definition>
+
+    <definition name="schemedefinition" extends="base.definition">
+        <put-attribute name="title" value="Schemes List" />
+        <put-attribute name="body" value="/WEB-INF/pages/scheme/schemedef.jsp" />
+    </definition>
+
+    <definition name="newscheme" extends="base.definition">
+        <put-attribute name="title" value="New Scheme" />
+        <put-attribute name="body" value="/WEB-INF/pages/scheme/newscheme.jsp" />
+    </definition>
+
+    <definition name="sectorsList" extends="base.definition">
+        <put-attribute name="title" value="Sectors" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/sectordef.jsp" />
+    </definition>
+
+    <definition name="facilList" extends="base.definition">
+        <put-attribute name="title" value="Facilitator Types" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/facilitatordef.jsp" />
+    </definition>
+
+    <definition name="sproviders" extends="base.definition">
+        <put-attribute name="title" value="Service Providers" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/serviceProviders.jsp" />
+    </definition>
+
+    <definition name="speriods" extends="base.definition">
+        <put-attribute name="title" value="Scheme Periods" />
+        <put-attribute name="body" value="/WEB-INF/pages/setups/schemePeriod.jsp" />
+    </definition>
+
+</tiles-definitions> 

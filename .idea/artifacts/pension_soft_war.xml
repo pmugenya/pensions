@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pension-soft:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="pension-soft.war">
+      <element id="artifact" artifact-name="pension-soft:war exploded" />
+    </root>
+  </artifact>
+</component>
