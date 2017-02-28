@@ -18,8 +18,6 @@ public class ServiceProvider {
     @Column(name="sp_id")
     private Long spId;
 
-    @Column(name="sp_dealer_class")
-    private String dealerClass;
 
     @Column(name="sp_code",nullable = false)
     private String spCode;
@@ -67,13 +65,6 @@ public class ServiceProvider {
         this.spId = spId;
     }
 
-    public String getDealerClass() {
-        return dealerClass;
-    }
-
-    public void setDealerClass(String dealerClass) {
-        this.dealerClass = dealerClass;
-    }
 
     public String getSpCode() {
         return spCode;

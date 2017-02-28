@@ -27,7 +27,7 @@
     </div>
     <div class="modal fade" id="speriodModal" tabindex="-1" role="dialog"
          aria-labelledby="speriodModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"
@@ -35,22 +35,22 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title" id="speriodModalLabel">
-                        Edit/Add Scheme Providers
+                        Edit/Add Scheme Periods
                     </h4>
                 </div>
                 <div class="modal-body">
                     <form id="period-form" class="form-horizontal">
-                        <input type="hidden" class="form-control" id="sp-id" name="speriodId">
+                        <input type="hidden" class="form-control" id="sp-id" name="periodId">
                         <div class="form-group">
-                            <div class="col-md-8">
+
                                 <label for="speriod-name" class="col-md-4 control-label">Scheme Period Desc</label>
 
                                 <div class="col-md-8">
                                     <input type="text" class="form-control" id="speriod-name"
                                            name="speriodName"  required>
                                 </div>
-                            </div>
-                            <div class="col-md-8">
+                        </div>
+                            <div class="form-group">
                                 <label for="start-date" class="col-md-4 control-label">Start Date</label>
 
                                 <div class="col-md-8">
@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-8">
+                            <div class="form-group">
                                 <label for="end-date" class="col-md-4 control-label">End Date</label>
 
                                 <div class="col-md-8">
@@ -76,7 +76,15 @@
                                     </div>
                                 </div>
                             </div>
+                        <div class="form-group">
+                            <label for="chk-closed" class="col-md-4 control-label">Closed?</label>
+                            <div class="col-md-8 checkbox">
+                                <label>
+                                    <input type="checkbox" name="closed" id="chk-closed">
+                                </label>
+                            </div>
                         </div>
+
                     </form>
                 </div>
                 <div class="modal-footer">

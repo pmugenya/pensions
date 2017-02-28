@@ -124,6 +124,7 @@ function newServiceProviders(){
 function newSchemePeriods() {
     $("#btn-add-periods").on("click", function(){
        $('#period-form').find("input[type=text],input[type=mobileNumber],input[type=emailFull],input[type=password],input[type=hidden],input[type=number], textarea").val("");
+        $("#chk-closed").prop("checked", false);
        $('#speriodModal').modal('show')
     });
 }
@@ -154,6 +155,11 @@ function createSchemePeriods(){
                     return full.endDate;
                 }
             },
+            { "data": "endDate",
+                "render":function(data,type,full,meta){
+                    return full.closed;
+                }
+            },
             {
                 "data": "speriodId",
                 "render": function ( data, type, full, meta ) {
@@ -182,7 +188,6 @@ function createServiceProviders(){
         pageLength: 10,
         destroy: true,
         "columns": [
-            { "data": "dealerClass" },
             { "data": "spCode" },
             { "data": "spName",
                 "render":function(data,type,full,meta){
@@ -264,13 +269,12 @@ function editProvider(button){
 }
 function editPeriod(button){
     var speriods = JSON.parse(decodeURI($(button).data("speriods")));
-    $("#sp-id").val(speriods["speriodId"]);
+    $("#sp-id").val(speriods["periodId"]);
     $("#speriod-name").val(speriods["speriodName"]);
     //$("#appoint-date").val(sproviders["spAppointDt"].format('DD/MM/YYYY'));
     $("#start-date").val(moment(speriods["startDate"]).format('DD/MM/YYYY'));
     $("#end-date").val(moment(speriods["endDate"]).format('DD/MM/YYYY'));
-
-
+    $("#chk-closed").prop("checked", speriods["closed"]);
     $('#speriodModal').modal('show');
 }
 

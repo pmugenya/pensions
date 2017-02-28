@@ -14,8 +14,6 @@
         <table id="sprovidertbl" class="table table-hover table-bordered">
             <thead>
             <tr>
-
-                <th>Dealer Class</th>
                 <th>Provider Code</th>
                 <th>Provider Name</th>
                 <th>Date of Appointment</th>
@@ -44,19 +42,7 @@
                     <form id="provider-form" class="form-horizontal">
                         <input type="hidden" class="form-control" id="sp-id" name="spId">
                         <div class="form-group">
-                            <div class="col-md-6">
-                            <label for="sp-id" class="col-md-4 control-label">Dealer Class</label>
-                               <%-- <div class="col-md-8">
-                                    <input type="text" class="form-control" id="prov-sht-desc"
-                                           name="spShtDesc"  required>
-                                </div> --%>
-                            <div class="col-md-8">
-                                <select class="form-control" id="driver-class" name="dealerClass" required>
-                                    <option value="">Select Dealer Class</option>
-                                    <option value="C">Corporate</option>
-                                </select>
-                            </div>
-                                </div>
+
                             <div class="col-md-6">
                                 <label for="provider-code" class="col-md-4 control-label">Provider Code</label>
 
@@ -65,6 +51,9 @@
                                            name="spCode"  required>
                                 </div>
                                 </div>
+                            <div class="col-md-6">
+
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-6">

@@ -32,6 +32,9 @@ public class SchemePeriod {
     @Column(name="end_date")
     private Date endDate;
 
+    @Column(name="period_closed")
+    private boolean closed;
+
     public Long getPeriodId(){
         return periodId;
     }
@@ -62,5 +65,13 @@ public class SchemePeriod {
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    public boolean isClosed() {
+        return closed;
+    }
+
+    public void setClosed(boolean closed) {
+        this.closed = closed;
     }
 }
