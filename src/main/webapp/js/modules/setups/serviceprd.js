@@ -264,7 +264,8 @@ function editProvider(button){
     $("#provider-code").val(sproviders["spCode"]);
     $("#provider-name").val(sproviders["spName"]);
     $("#provider-pin").val(sproviders["spPin"]);
-    $("#schema-sect-name").val(sproviders["sector"].sectorName)
+    $("#schema-sect-name").val(sproviders["sector"].sectorName);
+    $("#schema-sect-code").val(sproviders["sector"].sectorId);
     $('#sproviderModal').modal('show');
 }
 function editPeriod(button){
